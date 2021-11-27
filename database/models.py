@@ -11,13 +11,13 @@ class Book(models.Model):
 
     def __str__(self):
         return self.book_text
-    
+
     def was_published_recently(self):
         return self.loan_date >= timezone.now() - datetime.timedelta(days=1)
 
 
 class Choice(models.Model):
-    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    book = models.ForeignKey(Book, on_delete=models.CASCADE, null=True)
     choice_text = models.CharField(max_length=200)
 
     def __str__(self):
