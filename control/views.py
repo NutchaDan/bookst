@@ -1,3 +1,28 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from control.serializers import ControlSerializer
+from control.models import Control
 
-# Create your views here.
+from django.db.models import Q
+from rest_framework.decorators import action
+from rest_framework.response import Response
+from django.http.response import Http404
+
+class ControlViewSet(viewsets.ModelViewSet):
+    """
+    This viewset automatically provides list and retrieve actions.
+    """
+    queryset = Control.objects.all()
+    serializer_class = ControlSerializer
+
+    @action(detail=False, methods=['GET'])
+    def search(self, request, *args, **kwargs):
+        search_post = request.GET.get('_name')
+        if search_post or search_post == '':
+            try:
+                dataSet = self.queryset.filter(Q(name__icontains=search_post))
+            except Control.DoesNotExist:
+                raise Http404("Heroes does not exist")
+        else:
+            dataSet = self.queryset.all()
+        heroes = self.serializer_class(dataSet, many=True)
+        return Response(heroes.data)
