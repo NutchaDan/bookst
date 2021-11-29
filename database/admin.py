@@ -11,6 +11,7 @@ class BookAdmin(admin.ModelAdmin):
         ('Date information', {'fields': ['loan_date']}),
         ('URL Image',        {'fields': ['url_image']}),
         ('User',             {'fields': ['name_user']}),
+        ('Description',      {'fields': ['description']}),
     ]
     inlines = [ChoiceInline]
 
