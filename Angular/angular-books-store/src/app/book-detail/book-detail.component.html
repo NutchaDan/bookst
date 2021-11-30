@@ -1,11 +1,11 @@
 
 <div *ngIf="book">
 
-    <h2>{{book.name | uppercase}} Details</h2>
+    <h2>{{book.book_text | uppercase}} Details</h2>
     <div><span>id: </span>{{book.id}}</div>
     <div>
-      <label for="book-name">Book name: </label>
-      <input id="book-name" [(ngModel)]="book.name" placeholder="name">
+      <label for="book-book_text">Book name: </label>
+      <input id="book-book_text [(ngModel)]="book.bookbook-book_text placeholder="name">
     </div>
     <button (click)="goBack()">Back</button>
     <button (click)="save()">Confirm</button>

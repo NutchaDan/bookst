@@ -22,10 +22,10 @@ export class ShopComponent implements OnInit {
     .subscribe(books => this.books = books);
   }
 
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.bookService.addBook({ name } as Book)
+  add(book_text: string): void {
+    book_text = book_text.trim();
+    if (!book_text) { return; }
+    this.bookService.addBook({ book_text } as Book)
       .subscribe(book => {
         this.books.push(book);
       });

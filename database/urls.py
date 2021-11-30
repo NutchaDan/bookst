@@ -1,10 +1,15 @@
-from django.urls import path
+from django.urls import path, include
+from django.conf.urls import url
+from rest_framework.routers import DefaultRouter
+from database import views
 
-from . import views
+# Create a router and register our viewsets with it.
+router = DefaultRouter()
+router.register(r'database', views.DatabaseViewSet)
 
+# The API URLs are now determined automatically by the router.
 urlpatterns = [
-    # ex: /polls/
-    path('', views.index, name='index'),
-    # ex: /polls/5/
-    path('<int:book_id>/', views.detail, name='detail'),
+    path('', include(router.urls)),
+    url(r'^book/$',views.bookApi),
+    url(r'^book/([0-9]+)$',views.bookApi),
 ]

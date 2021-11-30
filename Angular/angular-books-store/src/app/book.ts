@@ -1,5 +1,8 @@
 export interface Book {
     id: number;
-    name: string;
-    
+    book_text : string;
+    loan_date : string;
+    url_image : string;
+    name_user : string;
+    description : string;
   }

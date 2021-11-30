@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from .models import Choice, Book
+from .models import Book
 
-class ChoiceInline(admin.TabularInline):
-    model = Choice
+# class ChoiceInline(admin.TabularInline):
+#     model = Choice
 
 class BookAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -13,7 +13,7 @@ class BookAdmin(admin.ModelAdmin):
         ('User',             {'fields': ['name_user']}),
         ('Description',      {'fields': ['description']}),
     ]
-    inlines = [ChoiceInline]
+    # inlines = [ChoiceInline]
 
 admin.site.register(Book, BookAdmin)
-admin.site.register(Choice)
+# admin.site.register(Choice)

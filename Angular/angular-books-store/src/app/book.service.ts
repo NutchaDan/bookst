@@ -37,7 +37,7 @@ export class BookService {
     this.messageService.add(`BookService: ${message}`);
   }
 
-  private booksUrl = 'http://localhost:8000/books/';  // URL to web api
+  private booksUrl = 'http://localhost:8000/database/';  // URL to web api
  
   /**
  * Handle Http operation that failed.
@@ -95,7 +95,7 @@ export class BookService {
       // if not search term, return empty book array.
       return of([]);
     }
-    return this.http.get<Book[]>(`${this.booksUrl}search/?_name=${term}`).pipe(
+    return this.http.get<Book[]>(`${this.booksUrl}search/?_book_text=${term}`).pipe(
       tap(x => x.length ?
         this.log(`found books matching "${term}"`) :
         this.log(`no books matching "${term}"`)),
