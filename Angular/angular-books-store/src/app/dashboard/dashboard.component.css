@@ -11,36 +11,15 @@ h2 {
   margin-top: 0%;
   color: #1c6470;
 }
-/*
-.books-menu {
-    padding: 0;
-    margin: auto;
-    max-width: 400px;
-    /* flexbox 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: flex-start;
-    align-items: flex-start;
+
+img {
+    width: 300px;
+    height: 400px;
+    padding-left: 20px;
 }
-  
+
 .books-menu a {
-    background-color: #cf988a;
-    border-radius: 10px;
-    padding: 1rem;
-    font-size: 1.3rem;
-    text-decoration: none;
     display: inline-block;
-    color: rgb(32, 30, 30);
     text-align: center;
-    width: 100%;
-    min-width: 70px;
-    margin: .5rem auto;
-    box-sizing: border-box;
-  
-    /* flexbox 
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-}*/
+    padding-left: 145px;
+}
