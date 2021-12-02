@@ -5,7 +5,7 @@ from django.contrib import admin
 
 class Book(models.Model):
     book_text = models.CharField(max_length=60,default='')
-    loan_date = models.DateTimeField('Loan Date')
+    loan_date = models.CharField(max_length=60,default='')
     url_image = models.CharField(max_length=200,default='')
     name_user = models.CharField(max_length=60,default='')
     description = models.CharField(max_length=200,default='')

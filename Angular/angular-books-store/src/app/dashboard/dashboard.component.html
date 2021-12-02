@@ -15,9 +15,9 @@
       <a href="#home" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-home"></i>Home</a>
       <!-- Right-sided navbar links. Hide them on small screens -->
       <div class="w3-right w3-hide-small">
-        <a href="#homesearch" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-search"></i></a>
-        <a href="shop/shop.component.html" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-heart"></i></a>
-        <a href="#books.bookshome" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-list"></i></a>
+        <a routerLink="#homesearch" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-search"></i></a>
+        <a routerLink="/books" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-list"></i></a>
+        <a routerLink="/shop" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-heart"></i></a>
       </div>
     </div>
   </div>
@@ -30,5 +30,6 @@
       {{book.book_text}}<br><br>
   </a>
 </div>
+<div style="padding:15px 10px" id="homesearch"></div>
 <app-book-search></app-book-search>
 </body>

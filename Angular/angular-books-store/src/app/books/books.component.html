@@ -9,39 +9,37 @@
 
 <body>
   <!-- Navbar (sit on top) -->
-  <div style="padding:15px 10px" id="bookshome"></div>
   <div class="w3-top">
     <div class="w3-bar w3-dark-gray w3-card" id="myNavbar" style="letter-spacing:2px; font-size: 15px;">
-      <a href="#home" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-home"></i>Home</a>
+      <a routerLink="/dashboard" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i
+          class="fa fa-home"></i>Home</a>
       <!-- Right-sided navbar links. Hide them on small screens -->
       <div class="w3-right w3-hide-small">
-        <a href="#homesearch" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-search"></i></a>
-        <a href="#shophome" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-heart"></i></a>
-        <a href="#bookshome" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-list"></i></a>
+        <a routerLink="/dashboard" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i
+            class="fa fa-search"></i></a>
+        <a routerLink="#bookshome" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i
+            class="fa fa-list"></i></a>
+        <a routerLink="/shop" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-heart"></i></a>
       </div>
     </div>
   </div>
 
-<h2>Books on shelf</h2>
-<ul class="books">
-  <li *ngFor="let book of books">
-    <a routerLink="/detail/{{book.id}}">
-      <span class="badge">{{book.id}}</span> {{book.book_text}}
-    </a>
-  </li>
-</ul>
+  <div style="padding:15px 10px" id="bookshome"></div>
+  <h2>Books on shelf</h2>
+  <ul class="books">
+    <li *ngFor="let book of books">
+      <a routerLink="/detail/{{book.id}}">
+        <span class="badge">{{book.id}}</span> {{book.book_text}}
+      </a>
+    </li>
+  </ul>
 
-<div>
-  <label for="new-book">Book name : </label>
-  <input id="new-book" #bookName />
+  <div>
+    <label for="new-book">Book name : </label>
+    <input id="new-book" #bookName/>
 
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button class="add-button" (click)="add(bookName.value); bookName.value=''">
-    Add Book
-  </button>
-</div>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class="add-button" (click)="add(bookName.value); bookName.value=''">Add Book</button>
+  </div>
 
 </body>
-
-
-
