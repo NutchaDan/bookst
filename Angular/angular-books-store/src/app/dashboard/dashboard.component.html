@@ -15,21 +15,32 @@
       <a href="#home" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-home"></i>Home</a>
       <!-- Right-sided navbar links. Hide them on small screens -->
       <div class="w3-right w3-hide-small">
-        <a routerLink="#homesearch" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-search"></i></a>
+        <a routerLink="#homesearch" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i
+            class="fa fa-search"></i></a>
         <a routerLink="/books" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-list"></i></a>
         <a routerLink="/shop" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-heart"></i></a>
       </div>
     </div>
   </div>
 
-<h2>Popular Book</h2>
-<div class="books-menu">
-  <a *ngFor="let book of books"
-      routerLink="/detail/{{book.id}}">
-      <img src="{{book.url_image}}"><br>
-      {{book.book_text}}<br><br>
-  </a>
-</div>
-<div style="padding:15px 10px" id="homesearch"></div>
-<app-book-search></app-book-search>
+  <h2>Popular Book</h2>
+  <div class="books-menu">
+    <a *ngFor="let book of books" routerLink="/detail/{{book.id}}">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{{book.url_image}}"><br>
+          </div>
+          <div class="flip-card-back">
+            <br><i><u>{{book.book_text}}</u></i><br>
+            <p>ผู้แต่ง : {{book.name_user}}</p>
+            <p>เรื่องย่อ : {{book.description}}</p><br>
+            <p>วันที่เพิ่ม : {{book.loan_date}}</p><br><br><br>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div style="padding:15px 10px" id="homesearch"></div>
+  <app-book-search></app-book-search>
 </body>

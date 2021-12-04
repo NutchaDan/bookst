@@ -1,7 +1,7 @@
 
 body {
-    font-family: "Courier New", sans-serif;
-    font-size: 17px;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 16px;
 }
 
 h2 {
@@ -22,4 +22,44 @@ img {
     display: inline-block;
     text-align: center;
     padding-left: 145px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+.flip-card-front {
+    background-color: #82afb6;
+    color: black;
+}
+  
+.flip-card-back {
+    background-color: #5ba1ad;
+    color: white;
+    transform: rotateY(180deg);
 }
