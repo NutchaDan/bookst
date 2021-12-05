@@ -29,10 +29,24 @@
       <span class="badge">{{book.id}}</span> {{book.book_text}}
     </a>
     <button class="delete" title="delete book"
-      (click)="delete(book)">x</button>
+      (click)="delete(book)">Delete</button>
   </li>
 </ul>
-
+<div id="search-component">
+  <label for="search-box">Search </label>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+  
+  <ul class="search-result">
+    <li *ngFor="let book of books$ | async" >
+      <a routerLink="/detail/{{book.id}}">
+        {{book.book_text}}
+      </a>
+      <button class="add-button" (click)="copy(book);">
+        +
+      </button><br>
+    </li>
+  </ul>
+</div>
 <div>
   <label for="new-book">Book name : </label>
   <input id="new-book" #bookName />

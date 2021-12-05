@@ -30,13 +30,29 @@
     <li *ngFor="let book of books">
       <a routerLink="/detail/{{book.id}}">
         <span class="badge">{{book.id}}</span> {{book.book_text}}
+        <img src="{{book.url_image}}">
       </a>
     </li>
   </ul>
+  <div class="books">
+    <a *ngFor="let book of books" routerLink="/detail/{{book.id}}">
+      <div class="w3-row-padding" style="margin-top:64px">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card">
+            <img src="{{book.url_image}}" alt="img">
+            <div class="w3-container">
+              <h3>{{book.book_text}}</h3>
+              <p class="w3-opacity">{{book.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
 
   <div>
     <label for="new-book">Book name : </label>
-    <input id="new-book" #bookName/>
+    <input id="new-book" #bookName />
 
     <!-- (click) passes input value to add() and then clears the input -->
     <button class="add-button" (click)="add(bookName.value); bookName.value=''">Add Book</button>
