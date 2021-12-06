@@ -1,29 +1,23 @@
 
 body {
-    font-family: "Courier New", sans-serif;
-    font-size: 17px;
+  font-family: 'Noto Sans Thai', sans-serif;
+  font-size: 17px;
 }
 
 h2 {
   font-family: "Lucida Console", sans-serif;
-  font-size: 25px;
-  color: #1c6470;
+  font-size: 30px;
+  color: #517470;
+  text-align: center;
 }
 
 img {
-  width: 300px;
-  height: 400px;
-  padding-left: 20px;
+  width: 340px;
+  height: 480px;
 }
 
-.heroes a {
-  color: #333;
-  text-decoration: none;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
-  display: block;
-  width: 100%;
+div.ex3 {
+  width: 300px;
+  height: 300px;
+  overflow:  auto;
 }

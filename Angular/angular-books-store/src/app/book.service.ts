@@ -32,6 +32,7 @@ export class BookService {
       catchError(this.handleError<Book>(`getBook id=${id}`))
     );
   }
+  
   /** Log a BookService message with the MessageService */
   private log(message: string) {
     this.messageService.add(`BookService: ${message}`);

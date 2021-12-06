@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BooksComponent } from './books/books.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { BookshDetailComponent } from './booksh-detail/booksh-detail.component';
 import { ShopComponent } from './shop/shop.component';
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'detail/:id', component: BookDetailComponent },
+  { path: 'detailsh/:id', component: BookshDetailComponent },
 ];
 
 @NgModule({

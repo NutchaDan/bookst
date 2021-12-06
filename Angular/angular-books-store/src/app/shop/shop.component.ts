@@ -29,6 +29,7 @@ export class ShopComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getBooks();
     this.books$ = this.searchTerms.pipe(
       // wait 300ms after each keystroke before considering the term
       debounceTime(300),

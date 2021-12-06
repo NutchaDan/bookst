@@ -1,0 +1,56 @@
+body {
+    font-family: "Courier New", sans-serif;
+    font-size: 17px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+
+label {
+    display: block;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-family: "Courier New", sans-serif;
+    height: 0%;
+}
+
+input {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    display: block;
+    padding-bottom: 0%;
+    height: 25px;
+}
+
+input:focus {
+    outline: #202429 auto 1px;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 0%;
+}
+
+.search-result li a {
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    display: inline-block;
+    width: 100%;
+    max-width: 590px;
+    padding: .5rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    background-color: #d1daec;
+}
+
+.search-result li a:hover {
+    background-color: #a4b6da;
+    color: white;
+}
+
+ul.search-result {
+    margin-top: 0;
+    padding-left: 0;
+}
