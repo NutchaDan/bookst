@@ -5,11 +5,19 @@ body {
 }
 
 h2 {
-  font-family: "Lucida Console", sans-serif;
-  font-size: 30px;
-  text-align: center;
-  margin-top: 0%;
-  color: #1c6470;
+    font-family: 'Sofia';
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0%;
+    color: #009698;
+}
+
+h3 {
+    font-family: 'Noto Sans Thai', sans-serif;
+    text-align: center;
+    margin-top: 0%;
+    color: #414a70;
+    font-size: 17px;
 }
 
 img {

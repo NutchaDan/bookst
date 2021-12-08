@@ -4,11 +4,10 @@ body {
 }
 
 h2 {
-  font-family: "Lucida Console", sans-serif;
+  font-family: 'Sofia';
   font-size: 30px;
   text-align: center;
   margin-top: 0%;
-  margin-bottom: 0%;
   color: #009698;
 }
 
@@ -17,6 +16,7 @@ p {
   text-align: center;
   margin-top: 0%;
   color: #414a70;
+  font-size: 17px;
 }
 
 .books {
