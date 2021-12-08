@@ -10,38 +10,42 @@
 <body>
   <!-- Navbar (sit on top) -->
   <div class="w3-top">
-    <div class="w3-bar w3-dark-gray w3-card" id="myNavbar" style="letter-spacing:2px; font-size: 15px;">
-      <a href="#dashboard" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-home"></i>Home</a>
+    <div class="w3-bar w3-dark-gray w3-card" id="myNavbar" style="font-size: 15px; height: 40px; font-family: 'Noto Sans Thai', sans-serif;">
+      <app-book-search class="w3-bar-item " style="position: absolute;"></app-book-search>
       <!-- Right-sided navbar links. Hide them on small screens -->
       <div class="w3-right w3-hide-small">
-        <a routerLink="/dashboard" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-search"></i></a>
-        <a routerLink="/books" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-list"></i></a>
+        <a routerLink="/dashboard" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-home"></i></a>
+        <a routerLink="/books" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-book"></i></a>
         <a routerLink="/shop" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-heart"></i></a>
       </div>
     </div>
   </div>
 
 <div *ngIf="book">
-
-    <h2>{{book.book_text | uppercase}} Details</h2>
-    <img src="{{book.url_image}}">
-    <div><span>id: </span>{{book.id}}</div>
-    <div><span>name: </span>{{book.book_text}}</div>
-    <div><span>date: </span>{{book.loan_date}}</div>
-    <div><span>description: </span>{{book.description}}</div>
-    <div>
-      <label for="book-book_text">Book name : </label>
-      <input id="book-book_text" [(ngModel)]="book.book_text" placeholder="name"><br>
-      <label for="book-loan_date">Date : </label>
-      <input id="book-loan_date" [(ngModel)]="book.loan_date" placeholder="date"><br>
-      <label for="book-url_image">Url image : </label>
-      <input id="book-url_image" [(ngModel)]="book.url_image" placeholder="image"><br>
-      <label for="book-name_user">User name : </label>
-      <input id="book-name_user" [(ngModel)]="book.name_user" placeholder="user"><br>
-      <label for="book-description">description : </label>
-      <input id="book-description" [(ngModel)]="book.description" placeholder="description"><br>
+  <h2>{{book.book_text | uppercase}} Details</h2>
+    <img src="{{book.url_image}}"><hr>
+    <div class="row">
+      <div class="column"  style="background-color:#c5c4d4;">
+        <div><span>ID : </span>{{book.id}}</div>
+        <div><span>Book name : </span>{{book.book_text}}</div>
+        <div><span>Writter : </span>{{book.name_user}}</div><br>
+        <div><span>Description: </span>{{book.description}}</div><br>
+        <div><span>Date : </span>{{book.loan_date}}</div>
+      </div>
+      <div class="column" style="background-color:#dddce9;">
+        <label for="book-book_text">Book name : </label>
+        <input id="book-book_text" [(ngModel)]="book.book_text" placeholder="name"><br>
+        <label for="book-name_user">Writter : </label>
+        <input id="book-name_user" [(ngModel)]="book.name_user" placeholder="user"><br>
+        <label for="book-description">description : </label>
+        <input id="book-description" [(ngModel)]="book.description" placeholder="description"><br>
+        <label for="book-loan_date">Date : </label>
+        <input id="book-loan_date" [(ngModel)]="book.loan_date" placeholder="date"><br>
+        <label for="book-url_image">Url image : </label>
+        <input id="book-url_image" [(ngModel)]="book.url_image" placeholder="image"><br>
+        <button (click)="goBack()">Back</button>
+        <button (click)="save()">Confirm</button>
+      </div>
     </div>
-    <button (click)="goBack()">Back</button>
-    <button (click)="save()">Confirm</button>
-  </div>
+</div>
 </body>

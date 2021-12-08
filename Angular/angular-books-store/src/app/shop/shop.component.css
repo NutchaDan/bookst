@@ -5,8 +5,18 @@ body {
 
 h2 {
   font-family: "Lucida Console", sans-serif;
-  font-size: 25px;
-  color: #1c6470;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color: #009698;
+}
+
+p {
+  font-family: 'Noto Sans Thai', sans-serif;
+  text-align: center;
+  margin-top: 0%;
+  color: #414a70;
 }
 
 .books {

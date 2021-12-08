@@ -36,5 +36,4 @@ export class BookDetailComponent implements OnInit {
         .subscribe(() => this.goBack());
     }
   }
-
 }

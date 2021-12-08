@@ -3,20 +3,40 @@ body {
     font-size: 17px;
   }
   
-  h2 {
+h2 {
     font-family: "Lucida Console", sans-serif;
-    font-size: 25px;
-    color: #1c6470;
+    font-size: 30px;
+    color: #a7928d;
     margin-left: 50px;
     padding: 20px;
     text-align: center;
-  }
+}
   
-  img {
+img {
       width: 360px;
       height: 500px;
       padding-left: 20px;
       margin-left: 600px;
       border-color: whitesmoke;
-  }
+}
   
+.row {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+.column {
+  float: left;
+  width: 50%;
+  padding: 30px;
+  height: 470px; /* Should be removed. Only for demonstration */
+}
+
+input {
+  width: 100%;
+  max-width: 550px;
+  display: block;
+  padding-bottom: 0%;
+  height: 25px;
+}

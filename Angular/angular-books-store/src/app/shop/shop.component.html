@@ -14,8 +14,8 @@
       <app-book-search class="w3-bar-item " style="position: absolute;"></app-book-search>
       <!-- Right-sided navbar links. Hide them on small screens -->
       <div class="w3-right w3-hide-small">
-        <a routerlink="/dashboard" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-home"></i></a>
-        <a routerLink="/books" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-list"></i></a>
+        <a routerLink="/dashboard" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-home"></i></a>
+        <a routerLink="/books" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-book"></i></a>
         <a routerLink="/shop" class="w3-bar-item w3-button w3-wide w3-hover-blue-gray"><i class="fa fa-heart"></i></a>
       </div>
     </div>
@@ -23,6 +23,7 @@
 
 <div style="padding:15px 10px" id="shophome"></div>
 <h2>Shop</h2>
+<p>รายชื่อหนังสือที่ต้องการ <i class="fa fa-heart"></i></p>
 <ul class="books">
   <li *ngFor="let book of books">
     <a routerLink="/detailsh/{{book.id}}">
@@ -38,12 +39,8 @@
   
   <ul class="search-result">
     <li *ngFor="let book of books$ | async" >
-      <a routerLink="/detail/{{book.id}}">
-        {{book.book_text}}
-      </a>
-      <button class="add-button" (click)="copy(book);">
-        +
-      </button><br>
+      <a routerLink="/detail/{{book.id}}">{{book.book_text}}</a>
+      <button class="add-button" (click)="copy(book);">+</button><br>
     </li>
   </ul>
 </div>

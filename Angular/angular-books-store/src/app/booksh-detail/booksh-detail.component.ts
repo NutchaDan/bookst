@@ -36,6 +36,5 @@ export class BookshDetailComponent implements OnInit {
         .subscribe(() => this.goBack());
     }
   }
-
 }
 
