@@ -38,7 +38,7 @@ p {
 .books a {
   color: #333;
   text-decoration: none;
-  background-color: #EEE;
+  background-color: #e9e2cf;
   margin: .5em;
   padding: .3em 0;
   height: 1.6em;
@@ -49,7 +49,9 @@ p {
 
 .books a:hover {
   color: #2c3a41;
-  background-color: #e6e6e6;
+  background-color: #dfd0a9;
+  max-width: 800px;
+  width: 100%;
 }
 
 .books a:active {
@@ -60,17 +62,12 @@ p {
 .books .badge {
   display: inline-block;
   font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color:#405061;
-  line-height: 1em;
+  background-color:#bdc9a6;
   position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  min-width: 16px;
+  height: 2em;
+  max-width: 30px;
+  width: 100%;
   text-align: right;
-  margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }
 
@@ -93,6 +90,7 @@ button.delete {
   color:  #525252;
   font-size: 1.1rem;
   padding: 1px 10px 3px 10px;
+  margin-left: 10em;
 }
 
 button.delete:hover {
