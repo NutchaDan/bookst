@@ -19,81 +19,74 @@ p {
   font-size: 17px;
 }
 
-.books {
-  margin: 0 0 2em 0;
+li {
   list-style-type: none;
-  padding: 0;
-  width: 15em;
+  margin-bottom: 0%;
 }
 
-.books li {
-  position: relative;
-  cursor: pointer;
-}
-
-.books li:hover {
-  left: .1em;
-}
-
-.books a {
-  color: #333;
-  text-decoration: none;
-  background-color: #e9e2cf;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
-  display: block;
-  width: 100%;
-}
-
-.books a:hover {
-  color: #2c3a41;
-  background-color: #dfd0a9;
-  max-width: 800px;
-  width: 100%;
-}
-
-.books a:active {
-  background-color: #525252;
-  color: #fafafa;
-}
-
-.books .badge {
+.search-result li a {
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
   display: inline-block;
-  font-size: small;
-  background-color:#bdc9a6;
+  width: 40%;
+  padding: .5rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  background-color: #d1daec;
+}
+
+.search-result li a:hover {
+  background-color: #a4b6da;
+  color: white;
+}
+
+img {
+  width: 150px;
+  height: 200px;
+  padding: 0%;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  background: linear-gradient(45deg,#49a09d,#5f2c82);
+}
+
+th, td {
+  padding: 15px;
+  background-color: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+th {
+  text-align: center;
+}
+
+thead th {
+  background-color: #55608f;
+  text-align: center;
+}
+
+tbody tr:hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
+tbody td {
   position: relative;
-  height: 2em;
-  max-width: 30px;
-  width: 100%;
-  text-align: right;
-  border-radius: 4px 0 0 4px;
+  text-align: center;
 }
 
-.add-button {
- padding: .5rem 1.5rem;
- font-size: 1rem;
- margin-bottom: 2rem;
-}
-
-.add-button:hover {
-  color: white;
-  background-color: #42545C;
-}
-
-button.delete {
+tbody td:hover:before {
+  content: "";
   position: absolute;
-  left: 210px;
-  top: 5px;
-  background-color: white;
-  color:  #525252;
-  font-size: 1.1rem;
-  padding: 1px 10px 3px 10px;
-  margin-left: 10em;
-}
-
-button.delete:hover {
-  background-color: #525252;
-  color: white;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255,255,255,0.2);
+  z-index: -1;
 }

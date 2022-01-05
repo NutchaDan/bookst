@@ -23,16 +23,44 @@
 
 <div style="padding:15px 10px" id="shophome"></div>
 <h2>Shop</h2>
-<p>รายชื่อหนังสือที่ต้องการ <i class="fa fa-heart"></i></p>
+<p>รายชื่อหนังสือที่ต้องการ <i class="fa fa-heart"></i></p><hr><br>
 <ul class="books">
-  <li *ngFor="let book of books">
-    <a routerLink="/detailsh/{{book.id}}">
-      <span class="badge"></span> {{book.book_text}}
-    </a>
-    <button class="delete" title="delete book"
-      (click)="delete(book)">Delete</button>
-  </li>
-</ul>
+  <table style="margin-left: 100px;">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Writter</th>
+        <th>Option</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>
+          <a routerLink="/detailsh/{{book.id}}">
+            <img src="{{book.url_image}}">
+          </a>
+        </td>
+        <td>
+          <a routerLink="/detailsh/{{book.id}}">
+            <span class="badge"></span> {{book.book_text}}
+          </a>
+        </td>
+        <td>
+          <a routerLink="/detailsh/{{book.id}}">
+            <span class="badge"></span> {{book.name_user}}
+          </a>
+        </td>
+        <td>
+          <button class="delete" title="delete book"
+            (click)="delete(book)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ul><br><hr>
+
+<br>
 <div id="search-component">
   <label for="search-box">Search </label>
   <input #searchBox id="search-box" (input)="search(searchBox.value)" />
